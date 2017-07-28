@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Mi nombre es Javier Prieto. Soy Licenciado en Ciencias Físicas y trabajo como Profesor en Ciclos Formativos de Informática, de las materias:
+
+* Redes
+* Seguridad Informática
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Aficionado a la electrónica digital, Arduino, programación...
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[hackvipr@gmail.com](mailto:hackvipr@gmail.com)
