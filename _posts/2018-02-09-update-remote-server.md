@@ -19,11 +19,12 @@ laptop$ sudo apt install tinyproxy
 
 When installed, tinyproxy automatically starts and listen to 8888 port.
 
-## SSH to the server
+## Giving the server access to the proxy through SSH
 
-Now I get SSH access to the server,
+Now I redirect the proxy port to the server through SSH:
+
 ```
-laptop$ ssh -f -N -n -R8888:127.0.0.1:8888 serveruser@192.168.1.99
+user@laptop:~$ ssh -f -N -n -R8888:127.0.0.1:8888 serveruser@192.168.1.99
 ```
 
 Options explained:
@@ -39,3 +40,43 @@ Options explained:
 laptop (host) hostport 8888
 
 * serveruser@192.168.1.99: server user name and IP Address
+
+## Accessing the server and configuring APT for use the proxy
+
+Let's access the server:
+
+```
+user@laptop:~$ ssh serveruser@192.168.1.99
+```
+
+And create the following file:
+
+```
+serveruser@server:~$ sudo nano /etc/apt/apt.conf.d/12proxy
+```
+
+With the following content:
+
+```
+Acquire::http::Proxy "http://localhost:8888";
+```
+
+## Update the server
+
+If everything is OK, now we can update the server:
+
+```
+serveruser@server:~$ sudo apt-get update
+...
+serveruser@server:~$ sudo apt-get upgrade
+```
+
+## When finished...
+
+When we finish, just kill the SSH process that is redirecting the 8888 port:
+
+```
+user@laptop:~$ ps -aux | grep 8888
+user      5307  ... ssh -f -N -n -R8888:127.0.0.1:8888 serveruser@192.168.1.99
+user@laptop:~$ kill -9 5307
+```
