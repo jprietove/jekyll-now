@@ -13,7 +13,7 @@ Internet Access for updating it?
 
 I will use my laptop as a HTTP proxy server. I will use tinyproxy:
 
-```
+```shell_session
 laptop$ sudo apt install tinyproxy
 ```
 
