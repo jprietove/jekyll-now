@@ -87,9 +87,5 @@ exclude:
   - README.md
   - CNAME
 
-<<<<<<< HEAD
-#theme: jekyll-theme-minimal
 remote_theme: mmistakes/minimal-mistakes
-=======
 theme: jekyll-theme-hacker
->>>>>>> 0015c4d200a90d7179ecf4bdc0ed88717d300ddb
