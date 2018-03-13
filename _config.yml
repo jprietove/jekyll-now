@@ -88,4 +88,4 @@ exclude:
   - CNAME
 
 remote_theme: mmistakes/minimal-mistakes
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
