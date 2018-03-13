@@ -68,7 +68,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    # css_class: 'highlight'
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -87,5 +87,9 @@ exclude:
   - README.md
   - CNAME
 
+<<<<<<< HEAD
 #theme: jekyll-theme-minimal
 remote_theme: mmistakes/minimal-mistakes
+=======
+theme: jekyll-theme-hacker
+>>>>>>> 0015c4d200a90d7179ecf4bdc0ed88717d300ddb
